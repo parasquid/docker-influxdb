@@ -15,4 +15,4 @@ NOTE: make sure that docker is run with " -r= false " so it doesn't restart prev
 Then create the container (and optionally run it)
 
     docker build -t docker-influxdb https://github.com/parasquid/docker-influxdb.git
-    docker run -d -P -p 8083 -p 2003 --expose 8090 --expose 8099 docker-influxdb
+    docker run -d -P -p 8083:8083 -p 2003:2003 docker-influxdb
