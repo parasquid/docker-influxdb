@@ -50,12 +50,12 @@ read-timeout = "5s"
 port = 8090
 
 # Where the raft logs are stored. The user running InfluxDB will need read/write access.
-dir  = "/data/raft"
+dir  = "/influxdb_data/raft"
 
 # election-timeout = "1s"
 
 [storage]
-dir = "/data/db"
+dir = "/influxdb_data/db"
 # How many requests to potentially buffer in memory. If the buffer gets filled then writes
 # will still be logged and once the local storage has caught up (or compacted) the writes
 # will be replayed from the WAL
@@ -165,7 +165,7 @@ write-batch-size = 5000000
 
 [wal]
 
-dir   = "/data/wal"
+dir   = "/influxdb_data/wal"
 flush-after = 1000 # the number of writes after which wal will be flushed, 0 for flushing on every write
 bookmark-after = 1000 # the number of writes after which a bookmark will be created
 
