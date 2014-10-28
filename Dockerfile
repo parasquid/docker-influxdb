@@ -24,6 +24,8 @@ EXPOSE 2003
 # Protobuf port (for clustering, don't expose publicly!)
 #EXPOSE 8099
 
+RUN mkdir /go
+
 VOLUME ["/influxdb_data"]
 
 CMD /usr/bin/influxdb -config=/etc/influxdb.toml
