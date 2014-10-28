@@ -24,7 +24,7 @@ EXPOSE 2003
 # Protobuf port (for clustering, don't expose publicly!)
 #EXPOSE 8099
 
-RUN mkdir /go
+RUN mkdir /go -p
 
 VOLUME ["/influxdb_data"]
 
